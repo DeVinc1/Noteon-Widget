@@ -1,0 +1,11 @@
+{
+  "name": "noteon",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "dev": "npm run dev:server & npm run dev:client"
+  }
+}
