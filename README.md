@@ -25,7 +25,6 @@ O projeto é construído utilizando as tecnologias a seguir:
     <img src="https://img.shields.io/badge/react-%2361DAFB?style=for-the-badge&logo=react&logoColor=black" alt="react" />
     <img src="https://img.shields.io/badge/nodejs-%235FA04E?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="nodejs" />
   </div>
-  <br/>
   <h4>Servidor, Requisições e Ferramentas</h4>
   <div>
     <img src="https://img.shields.io/badge/express-%23000000?style=for-the-badge&logo=express&logoColor=white" alt="express" />
@@ -33,7 +32,6 @@ O projeto é construído utilizando as tecnologias a seguir:
     <img src="https://img.shields.io/badge/dotenv-%23ECD53F?style=for-the-badge&logo=dotenv&logoColor=black" alt="dotenv" />
     <img src="https://img.shields.io/badge/cheerio-%23E88C1F?style=for-the-badge&logo=cheerio&logoColor=white" alt="cheerio" />
   </div>
-  <br/>
   <h4>APIs Externas</h4>
   <div>
     <img src="https://img.shields.io/badge/spotify-%231ED760?style=for-the-badge&logo=spotify&logoColor=white" alt="spotifyAPI" />
