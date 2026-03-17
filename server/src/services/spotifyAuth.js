@@ -29,7 +29,7 @@ export async function getSpotifyAccessToken() {
     const { access_token, expires_in } = responseToken.data;
 
     tokenCache = {
-        acessToken: access_token,
+        accessToken: access_token,
         expiresAt: timeNow + (expires_in - 60) * 1000
     };
 
@@ -53,4 +53,3 @@ function getTokensFromSpotify(credentials) {
         }
     );
 }
-
