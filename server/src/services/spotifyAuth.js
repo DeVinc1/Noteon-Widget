@@ -11,20 +11,16 @@ let tokenCache = {
     expiresAt: null,
 };
 
-/**
- * Obter o token de acesso ao Spotify de forma cacheada
- * @returns O token de acesso ao Spotify.
- */
 export async function getSpotifyAccessToken() {
-    const timeNow = Date.now();
+    const isCachedTokenValid = tokenCache.accessToken && tokenCache.expiresAt > Date.now()
 
-    if (tokenCache.accessToken && tokenCache.expiresAt > timeNow) {
+    if (isCachedTokenValid) {
         return tokenCache.accessToken;
     }
 
     const credentials = Buffer.from(`${SPOTIFY_CLIENT_ID}:${SPOTIFY_CLIENT_SECRET}`).toString('base64');
 
-    const responseToken = await getTokensFromSpotify(credentials);
+    const responseToken = await _getAuthTokenSpotify(credentials);
 
     const { access_token, expires_in } = responseToken.data;
 
@@ -36,12 +32,7 @@ export async function getSpotifyAccessToken() {
     return tokenCache.accessToken;
 }
 
-/**
- * Obter os tokens de credencial a partir das chaves de API do Spotify.
- * @param {*} credentials - As credenciais de user client e user secret do Spotify encodadas em base64;
- * @returns  o token de acesso ao Spotify e o seu tempo de expiração.
- */
-function getTokensFromSpotify(credentials) {
+function _getAuthTokenSpotify(credentials) {
     return axios.post(
         'https://accounts.spotify.com/api/token',
         'grant_type=client_credentials',
