@@ -1,15 +1,15 @@
 
 # Noteon 🎵
 
-Um widget *embeddável* para o Notion que exibe trechos de letras de músicas baseado em uma playlist do Spotify.
+Um widget *embeddável* para o Notion que exibe trechos de letras de músicas baseado em uma playlist ou álbum do Spotify.
 
 ## 📌 Sobre o Projeto
 
 O Noteon foi criado para trazer letras de músicas para o workspace do Notion de forma simples, rápida e personalizável, atuando como uma ponte entre o Spotify; o Genius e o próprio Notion em um fluxo de etapas:
 
-- **Recepção**: Primeiro, o widget é carregado via bloco /embed no Notion, recebendo o ID de uma playlist do Spotify através de um *query parameter* na sua URL.
-- **Busca no Spotify**: A aplicação consulta a API do Spotify usando esse ID, encontra a playlist e recupera a lista de músicas contidas nela.
-- **Sorteio**: Uma faixa dessa playlist é selecionada aleatoriamente.
+- **Recepção**: Primeiro, o widget é carregado via bloco /embed no Notion, recebendo o ID de uma playlist ou álbum do Spotify através de um *query parameter* na sua URL.
+- **Busca no Spotify**: A aplicação consulta a API do Spotify usando esse ID, encontra a playlist ou álbum e recupera a lista de músicas contidas nela.
+- **Sorteio**: Uma faixa dessa seleção é selecionada aleatoriamente.
 - **Busca no Genius**: Com a faixa definida, a aplicação faz uma busca na API do Genius para recuperar a letra completa da música.
 - **Exibição**: O Noteon isola um trecho específico dessa letra e o exibe com uma interface limpa diretamente na sua página do Notion.
 
